@@ -1,12 +1,9 @@
-
-img{
-  margin-left: 30rem;
-}
-
 li {
   padding: 5px;
   margin: 5px;
   background: #faebd7;
+  list-style-type: none;
+  border-radius: 5px;
 }
 
 .label {
@@ -27,7 +24,7 @@ li {
   margin-bottom: 5px;
 }
 button {
-  border-radius: 8px;
+  border-radius: 5px;
   background-color: blue;
   color: white;
 }
