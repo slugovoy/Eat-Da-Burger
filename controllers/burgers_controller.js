@@ -10,8 +10,8 @@ router.get("/", function (req, res) {
       burgers: data,
     };
     console.log(handlebarsObject);
-    res.json(handlebarsObject);
-    // res.render("index", hbsObject);
+    // res.json(handlebarsObject);
+    res.render("index", handlebarsObject);
   });
 });
 
