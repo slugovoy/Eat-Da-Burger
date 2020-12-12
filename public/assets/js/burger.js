@@ -1,19 +1,15 @@
 // Make sure we wait to attach our handlers until the DOM is fully loaded.
-  
+  $(function(){
   $(".devour").on("click", function (event) {
-    var id = $(this).data("id");
-    var newState = $(this).data("newsleep");
-
-    var newState = {
-      devoured: newState,
-    };
+    let id = $(this).data("id");
+    console.log(id);
 
     // Send the PUT request.
-    $.ajax("/api/eat-burgers" + id, {
-      type: "PUT",
-      data: newSleepState,
+    $.ajax( {
+      url: "/api/eat-burgers/" + id,
+      method: "PUT",
     }).then(function () {
-      console.log("changed sleep to", newSleep);
+      console.log("Somebody ate your burger!");
       // Reload the page to get the updated list
       location.reload();
     });
@@ -23,17 +19,18 @@
     // Make sure to preventDefault on a submit event.
     event.preventDefault();
 
-    var newCat = {
-      name: $("#ca").val().trim(),
-      sleepy: $("[name=sleepy]:checked").val().trim(),
+    let  burger  = {
+      burger_name: $("#burg").val().trim(),
     };
+    console.log(burger);
 
     // Send the POST request.
-    $.ajax("/api/cats", {
-      type: "POST",
-      data: newCat,
+    $.ajax({
+      url: "/api/add-burgers",
+      method: "POST",
+      data: burger,
     }).then(function () {
-      console.log("created new cat");
+      console.log("Burger Added!");
       // Reload the page to get the updated list
       location.reload();
     });
