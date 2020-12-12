@@ -1,9 +1,9 @@
-<li>
-	<p>{{burger_name}}
-	</p>
-
+<div class="row d-flex flex-wrap">
+<li class="text-center col border border-success">
+	<p>{{burger_name}}</p>
+</li>
 	{{#if eaten}}{{else}}
-	<button class="devour" data-id="{{id}}">Devour It!
+	<button class="devour col: width of 15% mb-5" data-id="{{id}}">Devour It!
 	</button>
 	{{/if}}
-</li>
+</div>
