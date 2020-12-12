@@ -15,7 +15,7 @@ router.get("/", function (req, res) {
   });
 });
 
-router.post("/api/burgers", function (req, res) {
+router.post("/api/add-burgers", function (req, res) {
   console.log(req.body);
   const burger_name = req.body.burger_name;
   burger.insertOne(burger_name, function (
@@ -27,7 +27,7 @@ router.post("/api/burgers", function (req, res) {
   });
 });
 
-router.put("/api/burgers/:id", function (req, res) {
+router.put("/api/eat-burgers/:id", function (req, res) {
   const id = req.params.id;
 
   console.log("id", id);
