@@ -18,7 +18,7 @@ burger.selectAll(function (data) {
       console.table(data);
     });
   });
-  burger.updateOne(true, 36, function (err, data){
+  burger.updateOne(true, 53, function (err, data){
     console.log("Updated");
 
     burger.selectAll(function(data) {
