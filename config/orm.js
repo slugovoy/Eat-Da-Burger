@@ -41,28 +41,19 @@ var connection = require("../config/connection.js");
 
 // Object for all our SQL statement functions.
 const orm = {
-  selectAll: function (tableInput, cb) {
-    const query = `SELECT * FROM ?;`;
-    connection.query(query, function (err, data) {
+  selectAll: function (table, cb) {
+    const query = `SELECT * FROM ??`;
+    connection.query(query, [table], function (err, data) {
       if (err) {
         throw err;
       }
       cb(data);
     });
   },
-  insertOne: function (table, cols, vals, cb) {
-    var queryString = "INSERT INTO " + table;
+  insertOne: function (table, columnName, burger_name, cb) {
+   const query = `INSERT INTO ?? (??) VALUES (?)`;
 
-    queryString += " (";
-    queryString += cols.toString();
-    queryString += ") ";
-    queryString += "VALUES (";
-    queryString += printQuestionMarks(vals.length);
-    queryString += ") ";
-
-    console.log(queryString);
-
-    connection.query(queryString, vals, function (err, result) {
+    connection.query(query,[table, columnName, burger_name], function (err, result) {
       if (err) {
         throw err;
       }
@@ -70,17 +61,13 @@ const orm = {
       cb(result);
     });
   },
-  // An example of objColVals would be {name: panther, sleepy: true}
-  updateOne: function (table, objColVals, condition, cb) {
-    var queryString = "UPDATE " + table;
+ 
+  updateOne: function (table, condition, id, cb) {
+    
+    const query = `UPDATE ?? SET devoured = ? WHERE id = ?`
 
-    queryString += " SET ";
-    queryString += objToSql(objColVals);
-    queryString += " WHERE ";
-    queryString += condition;
-
-    console.log(queryString);
-    connection.query(queryString, function (err, result) {
+    console.log(query);
+    connection.query(query, [table, condition, id], function (err, result) {
       if (err) {
         throw err;
       }
@@ -88,10 +75,10 @@ const orm = {
       cb(result);
     });
   },
-  delete(table, condition, cb) {
-    const query = "DELETE FROM ?? WHERE ?";
-    connection.query(query, [table, condition], cb);
-  },
+  // delete(table, condition, cb) {
+  //   const query = "DELETE FROM ?? WHERE ?";
+  //   connection.query(query, [table, condition], cb);
+  // },
 };
 
 // Export the orm object for the model (cat.js).
