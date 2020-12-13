@@ -5,24 +5,28 @@
 <h1 class="text-center mt-5 text-danger text-decoration-underline">Eat-Da-Burger</h1>
 
 <div class="row">
- <div class="col-md-6">
-  <h3 class="text-center mt-3 mb-3">Burgers To Eat!</h3>
+ <div class="col-md-6 d-flex justify-content-center">
 <ol>
+  <h3 class="text-center mt-3 mb-3">Burgers To Eat!</h3>
+  <ul>
   {{#each burgers}}
     {{#unless devoured}}
       {{> burgers/burger-block eaten=false}}
     {{/unless}}
   {{/each}}
+  </ul>
 </ol>
 </div> 
-<div class="col-md-6">
-  <h3 class="text-center mt-3 mb-3">You Ate Them All!</h3>
+<div class="col-md-6 d-flex justify-content-center">
 <ol>
+  <h3 class="text-center mt-3 mb-3">You Ate Them All!</h3>
+  <ul>
   {{#each burgers}}
     {{#if devoured}}
       {{> burgers/burger-block eaten=true}}
     {{/if}}
   {{/each}}
+  </ul>
 </ol>
 </div>
 </div>

@@ -30,11 +30,8 @@ button {
   height: 3rem;
 }
 
-ol {
-  /* display: block;
-  justify-content: center;
-  background-color: rgb(24, 202, 202); */
-  border-radius: 10px;
+ul {
+  /* border-radius: 10px; */
   overflow: auto;
   width: 29rem;
   height: 18rem;
