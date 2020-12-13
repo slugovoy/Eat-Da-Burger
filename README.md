@@ -15,14 +15,14 @@ Checkout the [Deployed app here](https://warm-shore-22893.herokuapp.com/).
 
 ## Installation
 
-You don't need to install it, just simply go to this [Link](https://warm-shore-22893.herokuapp.com/) or go to .
+You don't need to install it, just simply go to this [Link](https://warm-shore-22893.herokuapp.com/) or, if your prefer, copy this link https://warm-shore-22893.herokuapp.com/ and paste in your browser.
 
 
 ## Usage
 
 * Gif:
 
-![Demo](./public/assets/images/burgerDemo.gif)
+![Demo](./public/assets/images/burgerDemo1.gif)
 
 
 * Instructions:
