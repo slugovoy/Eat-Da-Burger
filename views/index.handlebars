@@ -6,8 +6,8 @@
 
 <div class="row">
  <div class="col-md-6">
-<ol>
   <h3 class="text-center mt-3 mb-3">Burgers To Eat!</h3>
+<ol>
   {{#each burgers}}
     {{#unless devoured}}
       {{> burgers/burger-block eaten=false}}
@@ -16,8 +16,8 @@
 </ol>
 </div> 
 <div class="col-md-6">
-<ol>
   <h3 class="text-center mt-3 mb-3">You Ate Them Already!</h3>
+<ol>
   {{#each burgers}}
     {{#if devoured}}
       {{> burgers/burger-block eaten=true}}
