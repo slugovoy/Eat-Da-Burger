@@ -18,8 +18,8 @@ const orm = require("../config/orm.js");
       cb(res);
     });
   },
-  delete(condition, cb) {
-    orm.delete("cats", condition, cb);
+  deleteOne: function(id, cb) {
+    orm.deleteOne("burgers", id, cb);
   },
 };
 

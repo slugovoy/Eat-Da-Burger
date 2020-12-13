@@ -2,7 +2,11 @@
 <li class="text-center col border border-success">
 	<p>{{burger_name}}</p>
 </li>
-	{{#if eaten}}{{else}}
+	{{#if eaten}}
+	<button class="delete col: width of 15% mb-5" data-id="{{id}}">Delete From Table!
+	</button>
+
+	{{else}}
 	<button class="devour col: width of 15% mb-5" data-id="{{id}}">Devour It!
 	</button>
 	{{/if}}

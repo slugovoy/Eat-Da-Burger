@@ -13,22 +13,24 @@ const orm = {
     });
   },
   insertOne: function (table, columnName, burger_name, cb) {
-   const query = `INSERT INTO ?? (??) VALUES (?)`;
+    const query = `INSERT INTO ?? (??) VALUES (?)`;
 
-    connection.query(query,[table, columnName, burger_name], function (err, data) {
-      if (err) {
-        throw err;
+    connection.query(
+      query,
+      [table, columnName, burger_name],
+      function (err, data) {
+        if (err) {
+          throw err;
+        }
+
+        cb(data);
       }
-
-      cb(data);
-    });
+    );
   },
- 
-  updateOne: function (table, condition, id, cb) {
-    
-    const query = `UPDATE ?? SET devoured = ? WHERE id = ?`
 
-    console.log(query);
+  updateOne: function (table, condition, id, cb) {
+    const query = `UPDATE ?? SET devoured = ? WHERE id = ?`;
+
     connection.query(query, [table, condition, id], function (err, data) {
       if (err) {
         throw err;
@@ -37,7 +39,11 @@ const orm = {
       cb(data);
     });
   },
- 
+
+  deleteOne: function (table, id, cb) {
+    const query = `DELETE FROM ?? WHERE id = ?`;
+    connection.query(query, [table, id], cb);
+  },
 };
 
 // Export the orm object for the model (cat.js).

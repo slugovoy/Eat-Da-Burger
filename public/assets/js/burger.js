@@ -1,8 +1,29 @@
 // Make sure we wait to attach our handlers until the DOM is fully loaded.
   $(function(){
+
+    $(".delete").on("click", function (event) {
+// Make sure to preventDefault on a submit event.
+      event.preventDefault();
+
+      const id  = $(this).data("id");
+
+  
+      // Send the PUT request.
+      $.ajax( {
+        url: "/api/delete-burgers/" + id,
+        method: "DELETE",
+      }).then(function () {
+        console.log("Burger Deleted!");
+        // Reload the page to get the updated list
+        location.reload();
+      });
+    });
+
   $(".devour").on("click", function (event) {
+// Make sure to preventDefault on a submit event.
+    event.preventDefault();
+
     let id = $(this).data("id");
-    console.log(id);
 
     // Send the PUT request.
     $.ajax( {
