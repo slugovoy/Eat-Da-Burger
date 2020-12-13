@@ -3,7 +3,7 @@
 
 Eat-Da-Burger is an application  that lets users input the names of burgers they'd like to eat and delete them from the table if they already eaten. 
 
-Checkout the [Deployed app here]().
+Checkout the [Deployed app here](https://warm-shore-22893.herokuapp.com/).
 
 ## Table of Contents
 * [Installation](#installation)
@@ -15,7 +15,7 @@ Checkout the [Deployed app here]().
 
 ## Installation
 
-You don't need to install it, just simply go to this [Link]() or go to .
+You don't need to install it, just simply go to this [Link](https://warm-shore-22893.herokuapp.com/) or go to .
 
 
 ## Usage
