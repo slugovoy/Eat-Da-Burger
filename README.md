@@ -22,7 +22,7 @@ You don't need to install it, just simply go to this [Link](https://warm-shore-2
 
 * Gif:
 
-![Demo](./public/assets/images/burgerDemo1.gif)
+![Demo](./public/assets/images/burgerDemo.gif)
 
 
 * Instructions:
