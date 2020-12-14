@@ -8,7 +8,7 @@
       const id  = $(this).data("id");
 
   
-      // Send the PUT request.
+      // Send the DELETE request.
       $.ajax( {
         url: "/api/delete-burgers/" + id,
         method: "DELETE",
