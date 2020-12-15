@@ -1,3 +1,4 @@
+/* Styles for burger-block.handlebars */
 .mainDiv {
   padding: 5px;
   background: #faebd7;
@@ -5,37 +6,33 @@
   border-radius: 5px;
   margin-bottom: 8px;
 }
-
+/* Font weight for label */
 .label {
   font-weight: bold;
 }
-
-.create-update-form {
-  padding: 5px;
-  margin: 5px;
-  background: aqua;
-}
+/* Style for create form */
 .create-form{
   text-align: center;
 
 }
-
+/* Style for form-group */
 .form-group {
   margin-bottom: 5px;
 }
+/* Styles for buttons */
 button {
   border-radius: 5px;
   background-color: blue;
   color: white;
   height: 3rem;
 }
-
+/* Styles for unordered list */
 ul {
-  /* border-radius: 10px; */
   overflow: auto;
   width: 29rem;
   height: 18rem;
 }
+/* Styles for image */
 .myBurger {
   width: 200px;
   height: 200px;
